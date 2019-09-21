@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+li{
+    list-style: none;
+}
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+/* 头部搜索区域 */
+header{
+    display: flex;/* 以屏幕大小为准 */
+    position: fixed;
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;   
+}
+.search{
+    box-sizing: border-box;
+    margin-top: 9px;
+    padding: 5px 30px;
+    height: 26px;
+    border: 1px solid #cccccc;
+    outline: none;
+    flex: 1;
+    border-radius: 15px;
+    background: url('../images/header-sprite.png') no-repeat 10px 5px;
+    background-size: 22px;
+}
+.user{
+    height: 44px;
+    width: 44px;
+    text-decoration: none;
+    text-align: center;
+    /* color: white; */
+}
+.user::before{
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin: 1px auto;
+    display: block;
+    background:url('../images/header-sprite.png') no-repeat 0 -81px;
+    background-size: 22px auto;
+}
+/* 焦点图部分 */
+.focus{
+    padding-top: 44px;
+}
+.focus img{
+    width: 100%;
+    display: block;
+}
+/* 导航栏部分 */
+.nav{
+    height: 64px;
+    display: flex;
+    margin: 3px 4px;
+    border-radius: 5px;
+    background-color: white;
+}
+.nav li{
+    flex: 1;
+}
+.nav a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav a [class^="nav-icon"]{
+    width: 32px;
+    height: 32px;
+    background:url('../images/localnav_bg.png') no-repeat 0 0;
+    background-size: 32px auto;
+    margin-top: 8px;
+}
+.nav a .nav-icon-icon2{
+    background-position: 0 -32px;
+}
+.nav a .nav-icon-icon3{
+    background-position: 0 -64px;
+}
+.nav a .nav-icon-icon4{
+    background-position: 0 -96px;
+}
+.nav a .nav-icon-icon5{
+    background-position: 0 -128px;
+}
+
+/* 菜单导航部分 */
+.menu-father{
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 4px;
+}
+.menu{
+    height: 88px;
+    width: 100%;
+    display: flex;
+    color: white;
+}
+.menu:nth-child(1){
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+.menu:nth-child(2){
+    margin: 3px 0;
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+.menu:nth-child(3){
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+.menu-item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.menu-item:nth-child(1){
+    text-align: center;
+    line-height: 45px;
+    background: url('../images/hotel.png') no-repeat bottom center;
+    background-size: 121px auto;
+}
+.menu .flight{
+    background: url('../images/nav-items-flight.png') no-repeat 20px 40px;
+    background-size: 121px auto;
+}
+.menu .travel{
+    background: url('../images/travel.png') no-repeat 15px 30px;
+    background-size: 121px auto;
+}
+.menu-item:nth-child(-n+2){
+    border-right: 1px solid white;
+}
+.menu-item a{
+    flex:1;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+}
+.menu-item a:nth-child(1){
+    border-bottom: 1px solid white;
+}
+
+/* subnav导航部分 */
+.subnav{
+    border-radius: 8px;
+    margin: 0 4px;
+    height: 116px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.subnav li{
+    flex: 20%;
+}
+.subnav a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.subnav [class^="subnav-icon"]{
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    background: url('../images/subnav-bg.png') no-repeat 0 2px;
+    background-size: 24px auto;
+}
+.subnav .subnav-icon2{
+    background-position: 1px -24px;
+}
+.subnav .subnav-icon3{
+    background-position: 0 -54px;
+}
+.subnav .subnav-icon4{
+    background-position: 0px -84px;
+}
+.subnav .subnav-icon5{
+    background-position: 0px -114px;
+}
+.subnav .subnav-icon6{
+    background-position: 0px -139px;
+}
+.subnav .subnav-icon7{
+    background-position: 0px -169px;
+}
+.subnav .subnav-icon8{
+    background-position: 0px -199px;
+}
+.subnav .subnav-icon9{
+    background-position: 0px -224px;
+}
+.subnav .subnav-icon10{
+    background-position: 0px -250px;
+}
+.hot{
+    margin: 4px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+.hot-head{
+    position: relative;
+    padding: 10px 0;
+}
+.hot-head h2{
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+.hot-head h2::after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 79px;
+    top: 8px;
+    left: 20px;
+    background: url('../images/hot.png') no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+.more{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+}
+.more::after{
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.hot-body{
+    border-top: 1px solid #ccc;
+}
+.row{
+    display: flex;
+}
+.row a{
+    flex: 50%;
+    border-bottom: 1px solid #eee;
+}
+.row img{
+    width: 100%;
+    display: block;
+}
+.row a:nth-child(1){
+    border-right: 1px solid #eee;
+}
